@@ -1,3 +1,10 @@
-from django.shortcuts import render
+# posts/views.py
+from rest_framework import viewsets
+from .models import SocialPost
+from .serializers import SocialPostSerializedr
 
-# Create your views here.
+
+class SocialPostViewSet(viewsets.ModelViewSet):
+    '''this class defines the view for listing and creating social posts'''
+    queryset = SocialPost.objects.all()
+    serializer_class = SocialPostSerializedr

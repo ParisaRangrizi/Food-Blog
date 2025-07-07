@@ -15,3 +15,6 @@ class UserProfile(models.Model):
         verbose_name = 'User Profile'
         verbose_name_plural = 'User Profiles'
         db_table = 'user_profile'
+
+    def __str__(self):
+        return f"username: {self.user.username}"

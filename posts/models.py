@@ -58,4 +58,4 @@ class PostSave(models.Model):
         ]
 
     def __str__(self):
-        return f"{self.user.user.username} saved {self.recipe.title}"
+        return f"{self.user.user.username} saved {self.post.author}'s post."
